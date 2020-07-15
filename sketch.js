@@ -27,9 +27,8 @@ function draw() {
   translate(width / 2, height / 2);
   for (i = 0; i < data.length; i++) {
     let currentDate = new Date(data[i].date).getTime() / (1000 * 60 * 60 * 24);
-    const min = 0;
-    const fraction = Math.min(1, Math.max(0, (mouseY / (height * (1 + min)) + min)));
-    const offset = Math.min(1, Math.max(0, (mouseX / (width * (1 + min)) + min)));
+    const fraction = Math.min(1, Math.max(0, (mouseY / height)));
+    const offset = Math.min(1, Math.max(0, (mouseX / width)));
     const currentTimeBase = timeBase + (offset*(1-fraction)) * 3652;
     currentDate = (currentDate - currentTimeBase)
     let currentRadius = r - data[i].depth * 0.25;
