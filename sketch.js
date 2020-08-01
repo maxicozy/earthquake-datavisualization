@@ -35,7 +35,7 @@ const sketch1 = function(p) {
       const currentTimeBase = timeBase + (offset*(1-fraction)) * 3652;
       currentDate = (new Date(data[i].date).getTime() / (1000 * 60 * 60 * 24) - currentTimeBase)
       let currentRadius = p.r - data[i].depth * 0.25;
-      angle = (currentDate / 3652) / fraction * 2 * p.PI;
+      angle = (currentDate / 3652)/fraction * 2 * p.PI;
       const offsetAngle = p.PI - angle;
       if (data[i].size * sizeMultiplier < p.width * 2 && angle < 2 * p.PI && angle > 0) {
         p.noStroke();
