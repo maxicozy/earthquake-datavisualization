@@ -86,6 +86,3 @@ const sketch2 = function(p) {
 
 const vis = new p5(sketch1);
 const slider = new p5(sketch2);
-
-
-
